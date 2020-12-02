@@ -17,7 +17,7 @@ object Sxr {
         }
       ) ++ Seq[Def.Setting[_]](
         resolvers += "bintray/paulp" at "https://dl.bintray.com/paulp/maven",
-        addCompilerPlugin("org.improving" %% "sxr" % "1.0.1"),
+        addCompilerPlugin("org.improving" %% "sxr" % "1.0.2"),
         packageSxr in c <<= (packageSxr in c).dependsOn(compile in c),
         packagedArtifacts <++= Classpaths.packaged(Seq(packageSxr in c)),
         artifacts <++= Classpaths.artifactDefs(Seq(packageSxr in c)),
